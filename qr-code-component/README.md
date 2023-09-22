@@ -24,8 +24,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/LarsiParsii/frontendmentor-challenges/tree/0e1acbef95de91673c78b29a4abd596e6f06bbc1/qr-code-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- GitHub repository: [https://github.com/LarsiParsii/frontendmentor-challenges/tree/0e1acbef95de91673c78b29a4abd596e6f06bbc1/qr-code-component]
+- Live Site URL: [https://larsiparsii.github.io/frontendmentor-challenges/qr-code-component/]()
 
 
 ## My process
@@ -41,6 +41,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 Most of this I knew from beforehand, so it wasn't particularly hard. However, I did learn that if using a pecentage for an element's padding, it's a percentage of the parent's dimensions. This got me scratching my head for a couple of minutes.
 
+Oh, and I also learnt how to publish my site on GitHub pages. Neat!
+
 
 ### Useful resources
 
@@ -55,4 +57,4 @@ Most of this I knew from beforehand, so it wasn't particularly hard. However, I 
 
 ## Acknowledgments
 
-I hope I will continue to learn a lot in the future!
+Even though this is a simple challenge, it's fun seeing my little knowledge creating something visually appealing. I look forward to learning more!
