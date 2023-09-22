@@ -41,7 +41,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 Most of this I knew from beforehand, so it wasn't particularly hard. However, I did learn that if using a pecentage for an element's padding, it's a percentage of the parent's dimensions. This got me scratching my head for a couple of minutes.
 
-Oh, and I also learnt how to publish my site on GitHub pages. Neat!
+Oh, and I also learnt how to publish my site on GitHub Pages. Neat!
 
 
 ### Useful resources
