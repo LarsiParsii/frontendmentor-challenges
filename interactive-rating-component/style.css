@@ -18,6 +18,7 @@
 	--clr-paragraph: hsl(217, 12%, 63%);
 	--clr-card-bright: hsl(210, 19%, 18%);
 	--clr-card-dark: hsl(215, 27%, 12%);
+	--clr-selected: hsl(217, 12%, 63%);
 }
 
 .main {
@@ -68,18 +69,28 @@
 }
 
 .rating__score {
-	height: 2.9em;
-	width: 2.9em;
+	height: 3.25em;
+	width: 3.25em;
 	border-radius: 100%;
 	background-color: var(--clr-card-bright);
 	color: var(--clr-paragraph);
 	font-weight: var(--fw-heading);
 	border: none;
-	font-size: 1.2rem;
+	font-size: 1rem;
+}
+
+button[class=rating__score]:hover {
+	/* This selector selects the buttons with "rating__score" as its only class, i.e. not the already selected button. */
+	background-color: var(--clr-primary);
+	color: white;
 }
 
 .rating__score:hover {
-	background-color: var(--clr-primary);
+	cursor: pointer;
+}
+
+.selected {
+	background-color: var(--clr-selected);
 	color: white;
 }
 
@@ -99,6 +110,7 @@
 .rating__submit-button:hover {
 	background-color: white;
 	color: var(--clr-primary);
+	cursor: pointer;
 }
 
 .hidden {
