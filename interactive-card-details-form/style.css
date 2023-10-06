@@ -15,13 +15,14 @@
 	--clr-light-gray-violet: hsl(270, 3%, 87%);
 	--clr-dark-gray-violet: hsl(279, 6%, 55%);
 	--clr-very-dark-violet: hsl(278, 68%, 11%);
+	overflow-x: hidden;
 }
 
 .container {
 	height: 100vh;
+	width: 100%;
 	display: grid;
 	grid-template-rows: auto 1fr;
-	overflow-x: hidden;
 }
 
 .container-sidebar {
@@ -30,16 +31,16 @@
 	align-items: center;
 	height: 240px;
 
-	justify-content: center;
 	background-image: url("images/bg-main-mobile.png");
 	background-size: 100% 100%;
 }
 
+/* "VIRTUAL" CARD LAYOUT */
+
 .container-card {
 	position: relative;
+	margin: 0 auto;
 }
-
-/* "VIRTUAL" CARD LAYOUT */
 
 .card {
 	position: absolute;
@@ -113,8 +114,9 @@
 
 .container-main {
 	display: flex;
-	align-items: flex-start;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 	background-color: var(--clr-background);
 }
 
@@ -171,16 +173,16 @@
 	border: none;
 }
 
-.payment-form__exp>.error-text {
-	grid-column: span 2;
-}
-
 #exp__month {
 	grid-column: 1;
 }
 
 #exp__year {
 	grid-column: 2;
+}
+
+.payment-form__exp>.error-text {
+	grid-column: span 2;
 }
 
 .payment-form__cvc {
@@ -195,6 +197,7 @@
 	padding: 0.875em 0;
 	border-radius: 10px;
 	border: none;
+	cursor: pointer;
 }
 
 .payment-form__field:focus {
@@ -218,16 +221,66 @@
 	letter-spacing: 0.05em;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1400px) {
 	/* Desktop layout */
 
 	.container {
 		grid-template-rows: 1fr;
-		grid-template-columns: 1fr 65%;
+		grid-template-columns: auto auto;
+		position: relative;
 	}
 
 	.container-sidebar {
 		height: 100vh;
+		justify-content: end;
+		width: clamp(10rem, 28.3vw, 28rem);
 		background-image: url(images/bg-main-desktop.png)
+	}
+	
+	.container-card {
+		width: 447px;
+		aspect-ratio: 447 / 245;
+		right: -25%;
+		margin: 0;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.card {
+		width: 100%;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+		font-size: 1.65em;
+	}
+
+	.card-back {
+		grid-row: 2;
+		position: relative;
+		top: 7%;
+		margin-left: 20%;
+	}
+
+	.card-front {
+		grid-row: 1;
+		position: relative;
+		top: -7%;
+	}
+
+	.container-main {
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.payment-form {
+		position: static;
+		margin-left: 5%
+	}
+	
+	.payment-form__field {
+		font-size: 1.65em;
 	}
 }
