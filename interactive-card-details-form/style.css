@@ -253,7 +253,7 @@
 		left: 0;
 		right: 0;
 		position: absolute;
-		font-size: 1.65em;
+		font-size: 1.65rem;
 	}
 
 	.card-back {
@@ -281,6 +281,6 @@
 	}
 	
 	.payment-form__field {
-		font-size: 1.65em;
+		font-size: 1.1rem;
 	}
 }
