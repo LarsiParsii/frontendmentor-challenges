@@ -44,8 +44,8 @@
 
 .card {
 	position: absolute;
+	width: clamp(240px, 80vw, 285px);
 	aspect-ratio: 447 / 245;
-	width: 285px;
 	padding: 1em;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -118,6 +118,7 @@
 	align-items: center;
 	justify-content: flex-start;
 	background-color: var(--clr-background);
+	margin-top: clamp(1rem, 8vh, 6rem);
 }
 
 .payment-form {
@@ -125,7 +126,8 @@
 	display: flex;
 	flex-direction: column;
 	width: min(87%, 500px);
-	top: clamp(1rem, 15.3%, 6rem);
+	display: ;
+	/* !!REMOVE BEFORE RELEASE!! */
 }
 
 .payment-form__field-container,
@@ -193,6 +195,7 @@
 	font-size: 0.9rem;
 	color: white;
 	background-color: var(--clr-very-dark-violet);
+	width: 100%;
 	margin-top: 1.75em;
 	padding: 0.875em 0;
 	border-radius: 10px;
@@ -221,7 +224,14 @@
 	letter-spacing: 0.05em;
 }
 
-@media screen and (min-width: 1400px) {
+.container-thankyou {
+	width: auto;
+
+	display: none;
+	/* !!REMOVE BEFORE RELEASE!! */
+}
+
+@media screen and ((min-width: 1400px) and (min-height: 575px)) {
 	/* Desktop layout */
 
 	.container {
@@ -236,7 +246,7 @@
 		width: clamp(10rem, 28.3vw, 28rem);
 		background-image: url(images/bg-main-desktop.png)
 	}
-	
+
 	.container-card {
 		width: 447px;
 		aspect-ratio: 447 / 245;
@@ -269,18 +279,53 @@
 		top: -7%;
 	}
 
+	.card__small-text {
+		font-size: 0.75rem;
+	}
+
 	.container-main {
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		margin: 0;
 	}
 
 	.payment-form {
 		position: static;
 		margin-left: 5%
 	}
-	
+
 	.payment-form__field {
 		font-size: 1.1rem;
+	}
+}
+
+@media screen and (max-height: 575px) {
+	.container-main {
+		justify-content: flex-start;
+		align-items: center;
+		margin: 0;
+	}
+}
+
+@media screen and (((max-height: 690px) and (max-width: 1400px)) or (max-height: 575px)) {
+	.container-sidebar {
+		display: none;
+	}
+
+	.container {
+		grid-template-rows: 1fr;
+	}
+
+	.container-main {
+		margin: 0;
+		justify-content: center;
+	}
+}
+
+
+@media screen and ((max-height: 390px) or (max-width: 330px)) {
+	:root {
+		font-size: 14px;
 	}
 }

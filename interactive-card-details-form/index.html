@@ -35,13 +35,13 @@
 
 
     <main class="container-main">
-
+        
       <form class="payment-form">
         <div class="payment-form__field-container">
           <label for="name" class="payment-form__label">CARDHOLDER NAME</label>
           <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed" class="payment-form__field">
         </div>
-
+        
         <div class="payment-form__field-container">
           <label for="cardnum" class="payment-form__label">CARD NUMBER</label>
           <input type="text" name="cardnum" id="cardnum" placeholder="e.g. 1234 5678 9123 0000" class="payment-form__field">
@@ -51,7 +51,7 @@
         <div class="payment-form__third-row">
           <fieldset class="payment-form__exp">
             <legend class="payment-form__label">EXP. DATE (MM/YY)</legend>
-
+            
             <input type="text" name="exp__month" id="exp__month" placeholder="MM" class="payment-form__field ">
             <input type="text" name="exp__year" id="exp__year" placeholder="YY" class="payment-form__field ">
             <p class="error-text">Can't be blank</p>
@@ -65,16 +65,17 @@
 
         <button type="button" class="payment-form__button">Confirm</button>
       </form>
+      
 
+      <div class="container-thankyou">
+        <img src="images/icon-complete.svg" alt="">
+        <h1 class="thankyou-heading">Thank you!</h1>
+        <p class="thankyou-text">We've added your card details</p>
 
+        <button type="button" class="payment-form__button">Continue</button>
+      </div>
+      
     </main>
-
-    <!-- Completed state start -->
-    <!--
-    Thank you!
-    We've added your card details
-    Continue
-    -->
 
   </div>
 
