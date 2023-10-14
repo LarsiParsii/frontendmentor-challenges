@@ -88,17 +88,8 @@
 
 .card-front__card-number {
 	grid-column: span 2;
-	text-align: justify;
-	margin-top: 1.5em;
-	margin-bottom: -1em;
+	margin-top: 0.75em;
 	letter-spacing: 0.1em;
-}
-
-.card-front__card-number::after {
-	content: "";
-	width: 100%;
-	height: 1em;
-	display: inline-block;
 }
 
 .card-front__name {
@@ -117,7 +108,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-self: center;
 	background-color: var(--clr-background);
+	width: min(87%, 500px);
 	margin-top: clamp(1rem, 8vh, 6rem);
 }
 
@@ -125,9 +118,9 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	width: min(87%, 500px);
+	width: 100%;
 	
-	display: none;
+	display: ;
 	/* !!REMOVE BEFORE RELEASE!! */
 }
 
@@ -228,13 +221,13 @@
 /* THANK YOU SECTION */
 
 .container-thankyou {
-	width: 85%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 2em;
 
-	display: ;
+	display: none;
 	/* !!REMOVE BEFORE RELEASE!! */
 }
 
